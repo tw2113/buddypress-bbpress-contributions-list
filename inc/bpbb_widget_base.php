@@ -135,7 +135,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	public function get_count_transient( $user = '', $project = '' ) {
 		if ( false === ( $count = get_transient( $user . '_' , $project . 'bp_count' ) ) ) {
 			$count = $this->get_changeset_count( $user );
-			set_transient( $user . '_' , $project . 'bp_count', $count );
+			set_transient( $user . '_' , $project . 'bp_count', $count, HOUR_IN_SECONDS );
 		}
 
 		return $count;
@@ -153,7 +153,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	public function get_contribs_transient( $user = '', $project = '' ) {
 		if ( false === ( $contribs = get_transient( $user . '_' . $project . '_contribs' ) ) ) {
 			$contribs = $this->get_changesets( $user );
-			set_transient( $user . '_' . $project . '_contribs', $contribs );
+			set_transient( $user . '_' . $project . '_contribs', $contribs, HOUR_IN_SECONDS );
 		}
 
 		return $contribs;
