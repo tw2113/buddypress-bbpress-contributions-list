@@ -1,10 +1,13 @@
 <?php
+
+namespace tw2113\BPBBPCL\BuddyPressWidget;
+
 /**
  * BuddyPress Contributions list
  *
  * @since 1.0
  */
-class BuddyPress_Contributions_List extends WP_Widget {
+class BuddyPress_Contributions_List extends \WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array( 'classname' => '', 'description' => __( 'Widget to display your BuddyPress contributions', 'buddypress-bbpress-contributions-list' ) );
