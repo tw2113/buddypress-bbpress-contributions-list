@@ -1,4 +1,7 @@
 <?php
+
+namespace tw2113\BPBBPCL\ContribBase;
+
 /**
  * Base class of contribution methods.
  *
