@@ -1,4 +1,7 @@
 <?php
+
+namespace tw2113\BPBBPCL\Shortcodes;
+
 /**
  * Shortcode callback for BuddyPress contributions
  *
@@ -8,7 +11,7 @@
  *
  * @return string HTML list of contributions
  */
-function bpbbcl_buddypress_list( $atts = array() ) {
+function buddypress_list( $atts = array() ) {
 
 	$theatts = shortcode_atts( array(
 		'user' => '',
@@ -17,7 +20,7 @@ function bpbbcl_buddypress_list( $atts = array() ) {
 
 	return bpbbcl_buddypress_get_contributions( $theatts[ 'user' ], $theatts[ 'count' ] );
 }
-add_shortcode( 'buddypress_contributions_list', 'bpbbcl_buddypress_list' );
+add_shortcode( 'buddypress_contributions_list', 'tw2113\BPBBPCL\Shortcodes\buddypress_list' );
 
 /**
  * Shortcode callback for bbPress contributions
@@ -28,7 +31,7 @@ add_shortcode( 'buddypress_contributions_list', 'bpbbcl_buddypress_list' );
  *
  * @return string HTML list of contributions
  */
-function bpbbcl_bbpress_list( $atts = array() ) {
+function bbpress_list( $atts = array() ) {
 
 	$theatts = shortcode_atts( array(
 		'user' => '',
@@ -37,4 +40,4 @@ function bpbbcl_bbpress_list( $atts = array() ) {
 
 	return bpbbcl_bbpress_get_contributions( $theatts[ 'user' ], $theatts[ 'count' ] );
 }
-add_shortcode( 'bbpress_contributions_list', 'bpbbcl_bbpress_list' );
+add_shortcode( 'bbpress_contributions_list', 'tw2113\BPBBPCL\Shortcodes\bbpress_list' );
