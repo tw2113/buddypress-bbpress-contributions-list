@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Fetch our BuddyPress user contributions
  * @param string $user User to get contributions for
@@ -11,7 +12,7 @@ function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 	$trac_base_url = 'https://buddypress.trac.wordpress.org';
 	$project = 'BuddyPress';
 
-	$base_object = new BuddyPressbbPress_Contributions_List_Base( array(
+	$base_object = new tw2113\BPBBPCL\ContribBase\BuddyPressbbPress_Contributions_List_Base( array(
 		'trac_url' => $trac_url,
 		'trac_base_url' => $trac_base_url
 	) );
@@ -81,7 +82,7 @@ function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 	$trac_base_url = 'https://bbpress.trac.wordpress.org';
 	$project = 'bbPress';
 
-	$base_object = new BuddyPressbbPress_Contributions_List_Base( array(
+	$base_object = new tw2113\BPBBPCL\ContribBase\BuddyPressbbPress_Contributions_List_Base( array(
 		'trac_url' => $trac_url,
 		'trac_base_url' => $trac_base_url
 	) );
