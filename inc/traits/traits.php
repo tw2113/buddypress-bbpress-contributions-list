@@ -1,6 +1,6 @@
 <?php
 
-trait widget_inputs {
+trait WP_Widget_Inputs {
 
 	public function form_input_text( array $args = array() ) {
 
