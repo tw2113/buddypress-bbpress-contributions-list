@@ -9,6 +9,8 @@ namespace tw2113\BPBBPCL\bbPressWidget;
  */
 class bbPress_Contributions_List extends \WP_Widget {
 
+	use \widget_inputs;
+
 	public function __construct() {
 		$widget_ops = array( 'classname' => '', 'description' => __( 'Widget to display your bbPress contributions', 'buddypress-bbpress-contributions-list' ) );
 		parent::__construct( 'bbPress_Contributions_List', __( 'bbPress Contributions List', 'buddypress-bbpress-contributions-list' ), $widget_ops );
@@ -53,28 +55,6 @@ class bbPress_Contributions_List extends \WP_Widget {
 			'value' => $count
 		) );
 
-	}
-
-	/**
-	 * Render a text input for the widget form
-	 * @param array $args Array of values to use with input
-	 *
-	 * @since 1.0
-	 */
-	function form_input_text( $args = array() ) {
-		$label_text = esc_attr( $args['label_text'] );
-		$name = esc_attr( $this->get_field_name( $args['name'] ) );
-		$id = esc_attr( $this->get_field_id( $args['id'] ) );
-		$value = esc_attr( $args['value'] );
-
-		printf(
-			'<p><label for="%s">%s</label><input type="text" class="widefat" name="%s" id="%s" value="%s" /></p>',
-			$id,
-			$label_text,
-			$name,
-			$id,
-			$value
-		);
 	}
 
 	/**
