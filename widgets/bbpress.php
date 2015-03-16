@@ -79,9 +79,9 @@ class bbPress_Contributions_List extends \WP_Widget {
 	 * @param array $instance Widget instance
 	 */
 	public function widget( $args, $instance ) {
-		$title = trim( strip_tags( $instance[ 'bpbbcl_title' ] ) );
-		$user = trim( strip_tags( $instance[ 'bpbbcl_bp_user' ] ) );
-		$count = trim( strip_tags( $instance[ 'bpbbcl_bp_count' ] ) );
+		$title = trim( strip_tags( $instance['bpbbcl_title'] ) );
+		$user  = trim( strip_tags( $instance['bpbbcl_bp_user'] ) );
+		$count = trim( strip_tags( $instance['bpbbcl_bp_count'] ) );
 
 		echo $args[ 'before_widget' ];
 		if ( $title ) {
