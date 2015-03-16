@@ -36,22 +36,22 @@ class bbPress_Contributions_List extends \WP_Widget {
 
 		$this->form_input_text( array(
 			'label_text' => __( 'Title', 'buddypress-bbpress-contributions-list' ),
-			'name' => 'bpbbcl_title',
-			'id' => 'bpbbcl_title',
+			'name' => $this->get_field_name( 'bpbbcl_title' ),
+			'id' => $this->get_field_id( 'bpbbcl_title' ),
 			'value' => $title
 		) );
 
 		$this->form_input_text( array(
 			'label_text' => __( 'Username', 'buddypress-bbpress-contributions-list' ),
-			'name' => 'bpbbcl_bp_user',
-			'id' => 'bpbbcl_bp_user',
+			'name' => $this->get_field_name( 'bpbbcl_bp_user' ),
+			'id' => $this->get_field_id( 'bpbbcl_bp_user' ),
 			'value' => $user
 		) );
 
 		$this->form_input_text( array(
 			'label_text' => __( 'Count', 'buddypress-bbpress-contributions-list' ),
-			'name' => 'bpbbcl_bp_count',
-			'id' => 'bpbbcl_bp_count',
+			'name' => $this->get_field_name( 'bpbbcl_bp_count' ),
+			'id' => $this->get_field_id( 'bpbbcl_bp_count' ),
 			'value' => $count
 		) );
 
