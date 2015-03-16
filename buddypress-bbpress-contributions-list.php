@@ -47,7 +47,8 @@ add_action( 'widgets_init', __NAMESPACE__ . '\register_widgets' );
 function requires() {
 	require_once 'inc/shortcode.php';
 	require_once 'inc/template_functions.php';
-	require_once 'inc/bpbb_widget_base.php';
+	require_once 'inc/class_bpbb_list_base.php';
+	require_once 'inc/traits/traits.php';
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\requires' );
 
