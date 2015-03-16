@@ -48,7 +48,7 @@ function requires() {
 	require_once 'inc/shortcode.php';
 	require_once 'inc/template_functions.php';
 	require_once 'inc/class_bpbb_list_base.php';
-	require_once 'inc/traits/traits.php';
+	require_once 'inc/traits/wp_widgets_form_trait.php';
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\requires' );
 
