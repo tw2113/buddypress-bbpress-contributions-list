@@ -9,7 +9,7 @@ namespace tw2113\BPBBPCL\bbPressWidget;
  */
 class bbPress_Contributions_List extends \WP_Widget {
 
-	use \widget_inputs;
+	use \WP_Widget_Inputs;
 
 	public function __construct() {
 		$widget_ops = array( 'classname' => '', 'description' => __( 'Widget to display your bbPress contributions', 'buddypress-bbpress-contributions-list' ) );
