@@ -125,9 +125,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	 * @since 1.0
 	 */
 	public function no_user() {
-		if ( is_user_logged_in() && current_user_can( 'manage_options' ) ) {
-			_e( 'Please provide a username', 'buddypress-bbpress-contributions-list' );
-		}
+		return __( 'Please provide a username.', 'buddypress-bbpress-contributions-list' );
 	}
 
 	/**
