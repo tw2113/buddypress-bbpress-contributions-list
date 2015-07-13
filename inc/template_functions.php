@@ -42,7 +42,7 @@ function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 			__( 'No contributions yet. Find some tickets at %s', 'buddypress-bbpress-contributions-list' ),
 			sprintf(
 				__( '<a href="%s">%s</a>' ),
-				$trac_base_url,
+				$base_object->trac_base_url,
 				$project . ' Trac'
 			)
 		);
@@ -112,7 +112,7 @@ function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 			__( 'No contributions yet. Find some tickets at %s', 'buddypress-bbpress-contributions-list' ),
 			sprintf(
 				__( '<a href="%s">%s</a>' ),
-				$trac_base_url,
+				$base_object->trac_base_url,
 				$project . ' Trac'
 			)
 		);
