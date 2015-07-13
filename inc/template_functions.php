@@ -8,8 +8,7 @@
  * @return string HTML markup list of BuddyPress user contributions
  */
 function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
-	$trac_url = 'https://buddypress.trac.wordpress.org/search';
-	$trac_base_url = 'https://buddypress.trac.wordpress.org';
+
 	$project = 'BuddyPress';
 
 	$base_object = new tw2113\BPBBPCL\ContribBase\BuddyPressbbPress_Contributions_List_Base( array(
