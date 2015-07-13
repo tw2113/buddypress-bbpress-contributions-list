@@ -23,15 +23,15 @@ function buddypress_list( array $atts = array() ) {
 add_shortcode( 'buddypress_contributions_list', 'tw2113\BPBBPCL\Shortcodes\buddypress_list' );
 
 /**
- * Shortcode callback for bbPress contributions
+ * Shortcode callback for bbPress contributions.
  *
- * @param array $atts Attributes provided for the bbPress shortcode
+ * @param array $atts Attributes provided for the bbPress shortcode.
  *
  * @since 1.0
  *
- * @return string HTML list of contributions
+ * @return string HTML list of contributions.
  */
-function bbpress_list( $atts = array() ) {
+function bbpress_list( array $atts = array() ) {
 
 	$theatts = shortcode_atts( array(
 		'user' => '',
