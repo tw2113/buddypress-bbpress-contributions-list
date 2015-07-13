@@ -3,15 +3,15 @@
 namespace tw2113\BPBBPCL\Shortcodes;
 
 /**
- * Shortcode callback for BuddyPress contributions
+ * Shortcode callback for BuddyPress contributions.
  *
- * @param array $atts Attributes provided for the BuddyPress shortcode
+ * @param array $atts Attributes provided for the BuddyPress shortcode.
  *
  * @since 1.0
  *
- * @return string HTML list of contributions
+ * @return string HTML list of contributions.
  */
-function buddypress_list( $atts = array() ) {
+function buddypress_list( array $atts = array() ) {
 
 	$theatts = shortcode_atts( array(
 		'user' => '',
