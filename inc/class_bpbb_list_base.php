@@ -33,7 +33,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	/**
 	 * Get a count of changesets a user is attributed to.
 	 *
-	 * @param string $username User to check the specified trac for
+	 * @param string $username User to check the specified trac for.
 	 *
 	 * @since 1.0
 	 *
@@ -69,7 +69,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	/**
 	 * Get a list of changesets a user is attributed to.
 	 *
-	 * @param string $username User to check the specified trac for
+	 * @param string $username User to check the specified trac for.
 	 *
 	 * @since 1.0
 	 *
@@ -131,13 +131,14 @@ class BuddyPressbbPress_Contributions_List_Base {
 	}
 
 	/**
-	 * Get user count transient
-	 * @param string $user User to set the transient for
+	 * Get user count transient.
+	 *
+	 * @param string $user    User to set the transient for.
 	 * @param string $project Project to set the transient for.
 	 *
 	 * @since 1.0
 	 *
-	 * @return string|mixed Saved transient data or false
+	 * @return string|mixed Saved transient data or false.
 	 */
 	public function get_count_transient( $user = '', $project = '' ) {
 		if ( false === ( $count = get_transient( $user . '_' , $project . 'bp_count' ) ) ) {
@@ -149,13 +150,14 @@ class BuddyPressbbPress_Contributions_List_Base {
 	}
 
 	/**
-	 * Get user contributions transient
-	 * @param string $user User to set the transient for
+	 * Get user contributions transient.
+	 *
+	 * @param string $user    User to set the transient for.
 	 * @param string $project Project to set the transient for.
 	 *
 	 * @since 1.0
 	 *
-	 * @return array|mixed Saved transient data or false
+	 * @return array|mixed Saved transient data or false.
 	 */
 	public function get_contribs_transient( $user = '', $project = '' ) {
 		if ( false === ( $contribs = get_transient( $user . '_' . $project . '_contribs' ) ) ) {
@@ -167,11 +169,11 @@ class BuddyPressbbPress_Contributions_List_Base {
 	}
 
 	/**
-	 * Get list type to display
+	 * Get list type to display.
 	 *
 	 * @since 1.0
 	 *
-	 * @return string List type to use
+	 * @return string List type to use.
 	 */
 	public function list_type() {
 		$list_type = apply_filters( 'bpbbcl_list_type', 'ol' );
@@ -190,7 +192,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	 *
 	 * @since 1.0
 	 *
-	 * @return string HTML list item markup
+	 * @return string HTML list item markup.
 	 */
 	public function list_item( $item = array() ) {
 		return sprintf(
