@@ -70,8 +70,7 @@ function bpbbcl_get_contributions( $user = '', $count = 5, $project = 'BuddyPres
 	) );
 
 	if ( empty( $user ) ) {
-		$base_object->no_user();
-		return false;
+		return $base_object->no_user();
 	}
 
 	$bpcontribs = $base_object->get_contribs_transient( $user, $project );
