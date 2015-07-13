@@ -16,6 +16,8 @@ Trac data scraping code borrowed and modified from https://wordpress.org/plugins
 
 Follow along with development on [GitHub](https://github.com/tw2113/buddypress-bbpress-contributions-list)
 
+NOTE: This plugin requires PHP 5.4 or higher to work.
+
 == Screenshots ==
 
 == Frequently Asked Questions ==
