@@ -3,7 +3,7 @@
 Contributors: tw2113
 Tags: buddypress, bbpress, widget, shortcode contributions
 Requires at least: 3.7
-Tested up to: 4.0
+Tested up to: 4.2.2.
 Stable tag: 1.0
 License: WTFPL
 Display your BuddyPress and bbPress contributions
