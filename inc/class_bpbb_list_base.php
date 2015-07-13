@@ -26,8 +26,8 @@ class BuddyPressbbPress_Contributions_List_Base {
 			)
 		);
 
-		$this->trac_url = $args['trac_url'];
-		$this->trac_base_url = $args['trac_base_url'];
+		$this->trac_url = 'https://' . strtolower( $args['trac_project'] ) . '.trac.wordpress.org/search';
+		$this->trac_base_url = 'https://' . strtolower( $args['trac_project'] ) . '.trac.wordpress.org';
 	}
 
 	/**
