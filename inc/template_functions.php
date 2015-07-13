@@ -76,13 +76,11 @@ function bpbbcl_buddypress_display_contributions( $user = '', $count = 5 ) {
  * @return string HTML markup list of bbPress user contributions
  */
 function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
-	$trac_url = 'https://bbpress.trac.wordpress.org/search';
-	$trac_base_url = 'https://bbpress.trac.wordpress.org';
+
 	$project = 'bbPress';
 
 	$base_object = new tw2113\BPBBPCL\ContribBase\BuddyPressbbPress_Contributions_List_Base( array(
-		'trac_url' => $trac_url,
-		'trac_base_url' => $trac_base_url
+		'trac_project' => $project
 	) );
 
 	if ( empty( $user ) ) {
