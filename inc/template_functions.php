@@ -39,6 +39,32 @@ function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 
 	$project = 'bbPress';
 
+	return bpbbcl_get_contributions( $user, $count, $project );
+}
+
+/**
+ * Fetch our bbPress user contributions.
+ *
+ * @param string $user  User to get contributions for.
+ * @param int    $count Contribution amount to display.
+ *
+ * @return string HTML markup list of bbPress user contributions.
+ */
+function bpbbcl_bbpress_display_contributions( $user = '', $count = 5 ) {
+	echo bpbbcl_bbpress_get_contributions( $user, $count );
+}
+
+/**
+ * Fetch our contributions for the provided project.
+ *
+ * @param string $user    User to get contributions for.
+ * @param int    $count   Contribution amount to display.
+ * @param string $project Project to get contributions for.
+ *
+ * @return bool|string
+ */
+function bpbbcl_get_contributions( $user = '', $count = 5, $project = 'BuddyPress' ) {
+
 	$base_object = new tw2113\BPBBPCL\ContribBase\BuddyPressbbPress_Contributions_List_Base( array(
 		'trac_project' => $project
 	) );
@@ -85,15 +111,4 @@ function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 	}
 
 	return $output;
-}
-
-/**
- * Fetch our bbPress user contributions
- * @param string $user User to get contributions for
- * @param int    $count Contribution amount to display
- *
- * @return string HTML markup list of bbPress user contributions
- */
-function bpbbcl_bbpress_display_contributions( $user = '', $count = 5 ) {
-	echo bpbbcl_bbpress_get_contributions( $user, $count );
 }
