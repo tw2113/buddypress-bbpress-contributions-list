@@ -1,11 +1,12 @@
 <?php
 
 /**
- * Fetch our BuddyPress user contributions
- * @param string $user User to get contributions for
- * @param int    $count Contribution amount to display
+ * Fetch our BuddyPress user contributions.
  *
- * @return string HTML markup list of BuddyPress user contributions
+ * @param string $user  User to get contributions for.
+ * @param int    $count Contribution amount to display.
+ *
+ * @return string HTML markup list of BuddyPress user contributions.
  */
 function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 
@@ -60,22 +61,24 @@ function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 }
 
 /**
- * Echo our BuddyPress user contributions
- * @param string $user User to get contributions for
- * @param int    $count Contribution amount to display
+ * Echo our BuddyPress user contributions.
  *
- * @return string HTML markup list of BuddyPress user contributions
+ * @param string $user  User to get contributions for.
+ * @param int    $count Contribution amount to display.
+ *
+ * @return string HTML markup list of BuddyPress user contributions.
  */
 function bpbbcl_buddypress_display_contributions( $user = '', $count = 5 ) {
 	echo bpbbcl_buddypress_get_contributions( $user, $count );
 }
 
 /**
- * Fetch our bbPress user contributions
- * @param string $user User to get contributions for
- * @param int    $count Contribution amount to display
+ * Fetch our bbPress user contributions.
  *
- * @return string HTML markup list of bbPress user contributions
+ * @param string $user  User to get contributions for.
+ * @param int    $count Contribution amount to display.
+ *
+ * @return string HTML markup list of bbPress user contributions.
  */
 function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 
