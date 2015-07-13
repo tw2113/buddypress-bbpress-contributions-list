@@ -12,8 +12,7 @@ function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 	$project = 'BuddyPress';
 
 	$base_object = new tw2113\BPBBPCL\ContribBase\BuddyPressbbPress_Contributions_List_Base( array(
-		'trac_url' => $trac_url,
-		'trac_base_url' => $trac_base_url
+		'trac_project' => $project
 	) );
 
 	if ( empty( $user ) ) {
