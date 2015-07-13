@@ -22,8 +22,7 @@ class BuddyPressbbPress_Contributions_List_Base {
 	function __construct( array $args = array() ) {
 		$args = wp_parse_args( $args,
 			array(
-				'trac_url' => 'https://buddypress.trac.wordpress.org/search',
-				'trac_base_url' => 'https://buddypress.trac.wordpress.org'
+				'trac_project' => 'buddypress'
 			)
 		);
 
