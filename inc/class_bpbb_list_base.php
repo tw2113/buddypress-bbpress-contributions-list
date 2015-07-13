@@ -10,7 +10,7 @@ namespace tw2113\BPBBPCL\ContribBase;
 class BuddyPressbbPress_Contributions_List_Base {
 
 	/**
-	 * @var string Trac URL to fetch data from
+	 * @var string Trac URL to fetch data from.
 	 */
 	public $trac_url = '';
 
