@@ -1,10 +1,15 @@
 <?php
+
+namespace tw2113\BPBBPCL\bbPressWidget;
+
 /**
  * bbPress Contributions list
  *
  * @since 1.0
  */
-class bbPress_Contributions_List extends WP_Widget {
+class bbPress_Contributions_List extends \WP_Widget {
+
+	use \WP_Widget_Inputs;
 
 	public function __construct() {
 		$widget_ops = array( 'classname' => '', 'description' => __( 'Widget to display your bbPress contributions', 'buddypress-bbpress-contributions-list' ) );
@@ -25,53 +30,31 @@ class bbPress_Contributions_List extends WP_Widget {
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
-		$title = strip_tags( $instance[ 'bpbbcl_title' ] );
-		$user = strip_tags( $instance[ 'bpbbcl_bp_user' ] );
-		$count = strip_tags( $instance[ 'bpbbcl_bp_count' ] );
+		$title = strip_tags( $instance['bpbbcl_title'] );
+		$user  = strip_tags( $instance['bpbbcl_bp_user'] );
+		$count = strip_tags( $instance['bpbbcl_bp_count'] );
 
 		$this->form_input_text( array(
 			'label_text' => __( 'Title', 'buddypress-bbpress-contributions-list' ),
-			'name' => 'bpbbcl_title',
-			'id' => 'bpbbcl_title',
-			'value' => $title
+			'name'       => $this->get_field_name( 'bpbbcl_title' ),
+			'id'         => $this->get_field_id( 'bpbbcl_title' ),
+			'value'      => $title
 		) );
 
 		$this->form_input_text( array(
 			'label_text' => __( 'Username', 'buddypress-bbpress-contributions-list' ),
-			'name' => 'bpbbcl_bp_user',
-			'id' => 'bpbbcl_bp_user',
-			'value' => $user
+			'name'       => $this->get_field_name( 'bpbbcl_bp_user' ),
+			'id'         => $this->get_field_id( 'bpbbcl_bp_user' ),
+			'value'      => $user
 		) );
 
 		$this->form_input_text( array(
 			'label_text' => __( 'Count', 'buddypress-bbpress-contributions-list' ),
-			'name' => 'bpbbcl_bp_count',
-			'id' => 'bpbbcl_bp_count',
-			'value' => $count
+			'name'       => $this->get_field_name( 'bpbbcl_bp_count' ),
+			'id'         => $this->get_field_id( 'bpbbcl_bp_count' ),
+			'value'      => $count
 		) );
 
-	}
-
-	/**
-	 * Render a text input for the widget form
-	 * @param array $args Array of values to use with input
-	 *
-	 * @since 1.0
-	 */
-	function form_input_text( $args = array() ) {
-		$label_text = esc_attr( $args['label_text'] );
-		$name = esc_attr( $this->get_field_name( $args['name'] ) );
-		$id = esc_attr( $this->get_field_id( $args['id'] ) );
-		$value = esc_attr( $args['value'] );
-
-		printf(
-			'<p><label for="%s">%s</label><input type="text" class="widefat" name="%s" id="%s" value="%s" /></p>',
-			$id,
-			$label_text,
-			$name,
-			$id,
-			$value
-		);
 	}
 
 	/**
@@ -96,9 +79,9 @@ class bbPress_Contributions_List extends WP_Widget {
 	 * @param array $instance Widget instance
 	 */
 	public function widget( $args, $instance ) {
-		$title = trim( strip_tags( $instance[ 'bpbbcl_title' ] ) );
-		$user = trim( strip_tags( $instance[ 'bpbbcl_bp_user' ] ) );
-		$count = trim( strip_tags( $instance[ 'bpbbcl_bp_count' ] ) );
+		$title = trim( strip_tags( $instance['bpbbcl_title'] ) );
+		$user  = trim( strip_tags( $instance['bpbbcl_bp_user'] ) );
+		$count = trim( strip_tags( $instance['bpbbcl_bp_count'] ) );
 
 		echo $args[ 'before_widget' ];
 		if ( $title ) {

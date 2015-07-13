@@ -27,32 +27,35 @@ Text Domain: buddypress-bbpress-contributions-list
 
 */
 
+namespace tw2113\BPBBPCL;
+
 /**
  * @since 1.0
  */
-function bpbbcl_register_widgets() {
+function register_widgets() {
 	require_once 'widgets/bbpress.php';
 	require_once 'widgets/buddypress.php';
 
-	register_widget( 'BuddyPress_Contributions_List' );
-	register_widget( 'bbPress_Contributions_List' );
+	register_widget( 'tw2113\BPBBPCL\BuddyPressWidget\BuddyPress_Contributions_List' );
+	register_widget( 'tw2113\BPBBPCL\bbPressWidget\bbPress_Contributions_List' );
 }
-add_action( 'widgets_init', 'bpbbcl_register_widgets' );
+add_action( 'widgets_init', __NAMESPACE__ . '\register_widgets' );
 
 /**
  * @since 1.0
  */
-function bpbbcl_requires() {
+function requires() {
 	require_once 'inc/shortcode.php';
 	require_once 'inc/template_functions.php';
-	require_once 'inc/bpbb_widget_base.php';
+	require_once 'inc/class_bpbb_list_base.php';
+	require_once 'inc/traits/wp_widgets_form_trait.php';
 }
-add_action( 'plugins_loaded', 'bpbbcl_requires' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\requires' );
 
 /**
  * @since 1.0
  */
-function bpbbcl_init() {
+function widgets_init() {
   load_plugin_textdomain( 'buddypress-bbpress-contributions-list', false, dirname( plugin_basename( __FILE__ ) . '/languages/' ) );
 }
-add_action( 'plugins_loaded', 'bpbbcl_init' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\widgets_init' );
