@@ -17,7 +17,7 @@ function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 
 	if ( empty( $user ) ) {
 		$base_object->no_user();
-		return;
+		return false;
 	}
 
 	$bpcontribs = $base_object->get_contribs_transient( $user, $project );
@@ -30,6 +30,8 @@ function bpbbcl_buddypress_get_contributions( $user = '', $count = 5 ) {
 	foreach ( $bpcontribs as $contrib ) {
 		if ( $limiter <= $count ) {
 			$list .= $base_object->list_item( $contrib );
+		} else {
+			break;
 		}
 		$limiter++;
 	}
@@ -85,7 +87,7 @@ function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 
 	if ( empty( $user ) ) {
 		$base_object->no_user();
-		return;
+		return false;
 	}
 
 	$bpcontribs = $base_object->get_contribs_transient( $user, $project );
@@ -98,6 +100,8 @@ function bpbbcl_bbpress_get_contributions( $user = '', $count = 5 ) {
 	foreach ( $bpcontribs as $contrib ) {
 		if ( $limiter <= $count ) {
 			$list .= $base_object->list_item( $contrib );
+		} else {
+			break;
 		}
 		$limiter++;
 	}
